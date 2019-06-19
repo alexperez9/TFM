@@ -4,8 +4,6 @@
   var myCharacteristic;
   var deviceName;
   function connect() {
-    let serviceUuid = "6E400001-B5A3-F393E0A9E50E24DCCA9E";
-    let characteristicUuid = "6E400003-B5A3-F393E0A9-E50E24DCCA9E";
     navigator.bluetooth.requestDevice({filters: [{services: [serviceUuid]}]})
     .then(device => {
       log('Connecting...');
